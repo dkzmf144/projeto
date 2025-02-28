@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Casas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menu lateral -->
+    <div id="menu" class="menu">
+        <div class="menu-item" onclick="window.location.href='#home'">Home</div>
+        <div class="menu-item" onclick="window.location.href='#casas'">Casas</div>
+        <div class="menu-item" onclick="window.location.href='#contato'">Contato</div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div id="content" class="content">
+        <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+        <div id="home">
+            <h1>Bem-vindo à nossa página de venda de casas!</h1>
+            <p>Confira nossas opções de casas disponíveis para compra.</p>
+        </div>
+
+        <div id="casas">
+            <h2>Casas Disponíveis</h2>
+            <p>Veja abaixo algumas opções de casas que temos à venda.</p>
+            <!-- Aqui você pode listar as casas com detalhes, imagens, etc. -->
+        </div>
+
+        <div id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
