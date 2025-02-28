@@ -3,37 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venda de Casas</title>
+    <title>Venda de Casas - Luxo e Conforto</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <!-- Menu lateral -->
     <div id="menu" class="menu">
-        <div class="menu-item" onclick="window.location.href='#home'">Home</div>
-        <div class="menu-item" onclick="window.location.href='#casas'">Casas</div>
-        <div class="menu-item" onclick="window.location.href='#contato'">Contato</div>
+        <div class="menu-item" onclick="window.location.href='#home'">🏠 Home</div>
+        <div class="menu-item" onclick="window.location.href='#casas'">🏡 Casas</div>
+        <div class="menu-item" onclick="window.location.href='#contato'">📞 Contato</div>
     </div>
 
     <!-- Conteúdo principal -->
     <div id="content" class="content">
         <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
 
-        <div id="home">
-            <h1>Bem-vindo à nossa página de venda de casas!</h1>
-            <p>Confira nossas opções de casas disponíveis para compra.</p>
-        </div>
+        <!-- Seção de Destaque -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Encontre a casa dos seus sonhos</h1>
+                <p>Casas modernas, confortáveis e prontas para você morar.</p>
+                <a href="#casas" class="btn">Ver Casas</a>
+            </div>
+        </section>
 
-        <div id="casas">
+        <!-- Seção de Casas Disponíveis -->
+        <section id="casas" class="casas">
             <h2>Casas Disponíveis</h2>
-            <p>Veja abaixo algumas opções de casas que temos à venda.</p>
-            <!-- Aqui você pode listar as casas com detalhes, imagens, etc. -->
-        </div>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Buscar por localização...">
+                <select id="price-filter">
+                    <option value="">Filtrar por preço</option>
+                    <option value="low">Até R$ 300.000</option>
+                    <option value="mid">R$ 300.000 - R$ 700.000</option>
+                    <option value="high">Acima de R$ 700.000</option>
+                </select>
+            </div>
+            <div class="house-list" id="house-list">
+                <!-- Casas serão carregadas dinamicamente -->
+            </div>
+        </section>
 
-        <div id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para mais informações.</p>
-        </div>
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </div>
 
     <script src="script.js"></script>
