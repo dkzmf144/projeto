@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -12,17 +13,16 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #0f0d0d;
   color: white;
-  padding: 10px 0;
+  padding: 80px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 header .logo h1 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 header nav ul {
@@ -59,31 +59,13 @@ header nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.banner button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.banner button:hover {
-  background-color: #444;
-}
-
-/* Produtos */
+/* Lista de Produtos */
 .produtos {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
   padding: 50px 20px;
   text-align: center;
-}
-
-.produtos h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  text-align: center;
-  width: 100%;
 }
 
 .produto-card {
@@ -91,18 +73,23 @@ header nav ul li a:hover {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 200px;
-  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-10px);
 }
 
 .produto-card img {
   width: 100%;
+  max-width: 200px;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .produto-card h3 {
   font-size: 20px;
-  margin: 15px 0;
+  margin-bottom: 10px;
 }
 
 .produto-card p {
